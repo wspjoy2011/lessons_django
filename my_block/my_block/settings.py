@@ -106,10 +106,12 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Europe/Kiev'
 
 USE_I18N = True
-
+USE_L10N = False
+DATE_FORMAT = 'd-m-Y'
+DATETIME_FORMAT = 'd b Y - H:i:s'
 USE_TZ = True
 
 
