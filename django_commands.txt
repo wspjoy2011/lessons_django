@@ -1,4 +1,4 @@
-pip install django # установка фреймворка django
+ppip install django # установка фреймворка django
 django-admin startproject (name of your project) # создание проекта django
 python manage.py migrate # перенос миграции в базу данных
 python manage.py runserver # запустить встроеный веб сервер
