@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
-from .models import Post
+from .models import Post, Comment
 
 
 def post_list(request):
@@ -27,6 +27,7 @@ def post_detail(request, year, month, day, post):
                              publish__month=month,
                              publish__day=day,
                              )
-    context = {"post": post}
+    comments = Comment.objects.filter(post=post.pk)
+    context = {"post": post, "comments": comments}
     return render(request, "blog/post/detail.html", context)
 

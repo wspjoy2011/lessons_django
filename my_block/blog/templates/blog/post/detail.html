@@ -8,4 +8,8 @@
     Published {{ post.publish }} by {{ post.author }}
 </p>
 {{ post.body|linebreaks }}
+    {% for comment in comments %}
+        {{ comment.name }}
+        {{ comment.body }}
+    {% endfor %}
 {% endblock %}
